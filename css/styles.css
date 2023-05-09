@@ -102,8 +102,18 @@ img {
     text-decoration: none;
 }
 .header-logo {
-    margin-right: 76px; 
+
 }
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 120px; 
+  }
+}
+@media only screen and (min-width: 1158px) {
+    .header-logo {
+      margin-right: 76px; 
+    }
+  }
 .logo-dark {
     color: var(--main-txt-color);
 }
@@ -125,13 +135,14 @@ img {
 .header-nav {
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 .header-nav-list {
     display: flex;
     gap: 40px;  
     margin: 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .header-nav-list {
     display: none;
   }
@@ -289,6 +300,11 @@ img {
 /* directions-container */
 .our-directions {
     padding-bottom: 120px;
+}
+@media only screen and (max-width: 1267px) {
+  .our-directions {
+    display: none;
+  }
 }
 
 .direction-list {
@@ -830,7 +846,7 @@ img {
     width: 100vw;
     height: 100vh;
     padding: 32px;
-    background-color: #3f51b5;
+    background-color: var(--accent-txt-color);
     z-index: 999;
   
     transform: translateX(100%);
@@ -857,6 +873,14 @@ img {
   .mobile-menu .link {
     display: block;
     padding: 10px;
-    color: #fff;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+
+    color: var(--main-txt-color);
     text-decoration: none;
+  }
+  .humburger-icon {
+    stroke: var(--main-txt-color);
   }
