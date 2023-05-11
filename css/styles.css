@@ -101,17 +101,15 @@ img {
     color: var(--primary-brand-color);
     text-decoration: none;
 }
-.header-logo {
 
-}
 @media only screen and (min-width: 768px) {
-  .header-logo {
-    margin-right: 120px; 
-  }
+    .header-logo {
+        margin-right: 120px; 
+    }
 }
 @media only screen and (min-width: 1158px) {
     .header-logo {
-      margin-right: 76px; 
+        margin-right: 76px; 
     }
   }
 .logo-dark {
@@ -343,11 +341,7 @@ img {
     justify-content: center;
     gap: 24px;
 }
-.mobile-socials {
-    display: flex;
-    justify-content: center;
-    gap: 56px;    
-}
+
 .socials-link {
     display: flex;
     justify-content: center;
@@ -841,11 +835,14 @@ img {
   
   .menu-container {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    padding: 80px 35px 40px 40px;
     background-color: var(--accent-txt-color);
     z-index: 999;
   
@@ -868,11 +865,13 @@ img {
     padding: 0;
     margin: 0;
     list-style: none;
+
+    margin-bottom: auto;
   }
   
-  .mobile-menu .link {
+.mobile-menu .link {
     display: block;
-    padding: 10px;
+    padding-bottom: 40px;
 
     font-weight: 700;
     font-size: 36px;
@@ -880,7 +879,53 @@ img {
 
     color: var(--main-txt-color);
     text-decoration: none;
-  }
+}
+.mobile-menu-nav:hover,
+.mobile-menu-nav:focus {
+    color: var(--pressed-state-color);
+}
   .humburger-icon {
     stroke: var(--main-txt-color);
   }
+.mobile-socials {
+    display: flex;
+    gap: 56px;    
+}
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+  .mobile-socials {
+    gap: 40px;
+  }
+}
+.mobile-contacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+    gap: 40px;
+}
+.mobile-tel {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.11;
+
+    color: var(--primary-brand-color);
+}
+.mobile-menu-btn {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    width: var(--indent);
+    height: var(--indent);
+
+    background-color: rgba(231, 233, 252, 0.1);
+    color: var(--main-txt-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--anim-fast), color var(--anim-fast), border var(--anim-fast);    
+}
