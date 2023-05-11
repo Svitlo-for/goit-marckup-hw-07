@@ -101,10 +101,16 @@ img {
     color: var(--primary-brand-color);
     text-decoration: none;
 }
+.header-logo {
+    padding-top: 24px;
+    padding-bottom: 22px;
+}
 
 @media only screen and (min-width: 768px) {
     .header-logo {
         margin-right: 120px; 
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 }
 @media only screen and (min-width: 1158px) {
@@ -182,7 +188,7 @@ img {
     font-style: normal;
     margin-left: auto;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .mail-tel {
     display: none;
   }
@@ -195,21 +201,42 @@ img {
 .mail-tel-link:focus {
     color: var(--pressed-state-color);
 }
-.mail-tel-list {
-    display: flex; 
-    gap: 40px;
+@media only screen and (min-width: 768px) {
+    .mail-tel-list {
+        display: flex; 
+        flex-direction: column;
+        gap: 12px;    
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+    }
+    }
+@media only screen and (min-width: 1158px) {
+  .mail-tel-list {
+    flex-direction: inherit;
+    gap: 40px;    
+  }
 }
+
 
 /* hero */
 .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    padding: 112px 0;
+    height: 432px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+
+    /* background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-color: var(--hero-bg-color);
     padding: 188px 0;
     max-width: 1440px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin: auto;
+    margin: auto; */
    
 }
 .hero-container {
@@ -218,15 +245,30 @@ img {
 }
 .hero-title {
     font-weight: 700;
-    font-size: 56px;
+    font-size: 36px;
     letter-spacing: 0.02em;
-    line-height: 1.07;
+    line-height: 1.11;
 
     color: var(--accent-txt-color);
     text-align: center;
-    max-width: 496px;
+
     margin: auto;
+
 }
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+
+    max-width: 496px; 
+    margin-bottom: 36px;   
+  }
+}
+@media only screen and (min-width: 768px) {
+    .hero-title {
+      margin-bottom: 48px;   
+    }
+  }
 .button {
     font-family: inherit;
     color: var(--accent-txt-color);
@@ -299,7 +341,7 @@ img {
 .our-directions {
     padding-bottom: 120px;
 }
-@media only screen and (max-width: 1267px) {
+@media only screen and (max-width: 1157px) {
   .our-directions {
     display: none;
   }
@@ -620,8 +662,9 @@ img {
 }
 .modal {
     position: absolute;
-    width: 408px;
-    height: 584px;
+    width: 392px;
+    height: 586px;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -631,6 +674,18 @@ img {
     background-color: var(--modal-bg-color);
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    height: 586px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+    .modal {
+        width: 408px;
+        height: 584px;
+    }
 }
 
 .modal-button {
@@ -833,7 +888,7 @@ img {
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  .menu-container {
+.menu-container {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -849,12 +904,17 @@ img {
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
   }
+@media only screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
   
-  .menu-container.is-open {
+.menu-container.is-open {
     transform: translateX(0);
   }
   
-  .menu-container .menu-toggle {
+.menu-container .menu-toggle {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -908,6 +968,11 @@ img {
     line-height: 1.11;
 
     color: var(--primary-brand-color);
+}
+.mobile-mail {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;    
 }
 .mobile-menu-btn {
     display: block;
