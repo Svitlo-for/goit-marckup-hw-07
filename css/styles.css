@@ -229,10 +229,14 @@ img {
 .hero {
     background-color: var(--hero-bg-color);
     padding: 112px 0;
+    margin: auto;
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin: auto;
+ 
+    max-width: 1440px;
+
    
 }
 @media only screen and (max-width: 428px) {
@@ -247,7 +251,7 @@ img {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg_mob@2x.jpg);
     }
 }
-@media only screen and (min-width: 429px) and (max-width: 768px) {
+@media only screen and (min-width: 429px) and (max-width: 767px) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg_tab.jpg);
   }
@@ -259,7 +263,7 @@ img {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg_tab@2x.jpg);
     }
 }
-@media only screen and (min-width: 769px) and (max-width: 1158px) {
+@media only screen and (min-width: 768px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-office_desc.jpg);
     }
@@ -274,7 +278,6 @@ img {
 @media only screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
-    max-width: 1440px;
     
   }
 }
@@ -536,9 +539,20 @@ img {
 .logo-list {
     display: flex;
     justify-content: center;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 72px 16px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .logo-list {
+    max-width: 582px;
+    margin: auto;
+    gap: 72px 24px;
+  }
+} 
+@media only screen and (min-width: 1158px) {
+  .logo-list {
     gap: 24px;
+  }
 }
 .logo-link {
     display: flex;
@@ -583,8 +597,7 @@ img {
 }
 
 .footer-block-container {
-    /* display: flex;
-    align-items: baseline; */
+  display: flex;
 }
 @media only screen and (min-width: 1158px) {
   .footer-block-container {
