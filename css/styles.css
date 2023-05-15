@@ -74,8 +74,8 @@ img {
     padding-right: 16px;
 
 
-    /* outline: 2px solid red;
-    outline-offset: -2px; */
+    outline: 2px solid red;
+    outline-offset: -2px;
 
 }
 @media only screen and (min-width: 768px) {
@@ -464,12 +464,22 @@ img {
     background-color: var(--light-bg-color);
     padding: 96px 0;
 }
+@media only screen and (min-width: 1158px) {
+  .team {
+    padding: 120px 0;
+  }
+}
 .team-list {
     gap: 72px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
+}
+@media only screen and (min-width: 768px) {
+  .team-list {
+    gap: 64px var(--indent);
+  }
 }
 @media only screen and (min-width: 1158px) {
   .team-list {
@@ -533,19 +543,27 @@ img {
 
   /* Customers */
 .customers {
+    padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+  .customers {
     padding: 120px 0;
+  }
+} 
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers-container {
+    max-width: 584px;
+  }
 }
 
 .logo-list {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 72px 16px;
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .logo-list {
-    max-width: 582px;
-    margin: auto;
     gap: 72px 24px;
   }
 } 
@@ -611,19 +629,21 @@ img {
     justify-content: center;
     gap: 72px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-block-container {
     justify-content: flex-start;
     gap: 72px 24px;
-    padding-left: 108px;
+    width: 582px;
   }
 }
+
 @media only screen and (min-width: 1158px) {
   .footer-block-container {
     display: flex;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: baseline;
-    gap: 24px;
+    gap: 0px;
     padding-left: 0;
   }
 }
@@ -673,8 +693,7 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .social-media-container {
-    text-align: inherit;
-    margin-right: 80px;
+    text-align: inherit;   
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -727,6 +746,7 @@ img {
   }
 }
 .footer-form-input {
+    display: block;
     background-color: transparent;
     border: 1px solid var(--accent-txt-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -752,13 +772,21 @@ img {
     width: 264px;
   }
 }
+@media only screen and (min-width: 1158px) {
+  .footer-form-input {
+    min-width: 264px;
+  }
+}
+
 .footer-form-button {
     display: flex;
     align-items: center;
     gap: 16px;
     
     padding-top: 8px;
+    padding-right: 24px;
     padding-bottom: 8px;
+    padding-left: 24px;
 
     background-color: var(--primary-brand-color);
 }
@@ -1191,7 +1219,7 @@ img {
 }
 @media only screen and (min-width: 320px) and (max-width: 427px) {
   .mobile-socials {
-    gap: 40px;
+    gap: var(--indent);
   }
 }
 .mobile-contacts {
@@ -1206,6 +1234,11 @@ img {
     line-height: 1.11;
 
     color: var(--primary-brand-color);
+}
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+  .mobile-tel {
+    font-size: 24px;
+  }
 }
 .mobile-mail {
     font-weight: 500;
@@ -1231,4 +1264,11 @@ img {
     align-items: center;
     justify-content: center;
     transition: background-color var(--anim-fast), color var(--anim-fast), border var(--anim-fast);    
+}
+.mobile-menu-nav.current {
+  color: var(--pressed-state-color);
+}
+
+.mobile-menu-nav.current::after {
+  background-color: var(--pressed-state-color);
 }

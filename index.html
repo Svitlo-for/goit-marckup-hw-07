@@ -168,13 +168,31 @@
                 <h2 class="title-header-two">What are we doing</h2>
                 <ul class="direction-list list">
                     <li class="direction-item">
-                        <img class="direction-img" src="./images/desktop.jpg" alt="iMac" width="360" height="300"/>
+                        <img 
+                            class="direction-img" 
+                            srcset="./images/doing/desktop.jpg 1x, ./images/doing/desktop@2x.jpg 2x"
+                            src="./images/doing/desktop.jpg" 
+                            alt="iMac" width="360" height="300"
+                            loading="lazy"
+                            />
                     </li>
                     <li class="direction-item">
-                        <img class="direction-img" src="./images/mobile.jpg" alt="mobile phone" width="360" height="300"/>
+                        <img 
+                        class="direction-img" 
+                        srcset="./images/doing/mobile.jpg 1x, ./images/doing/mobile@2x.jpg 2x"                        
+                        src="./images/doing/mobile.jpg" 
+                        alt="mobile phone" width="360" height="300"
+                        loading="lazy"
+                        />
                     </li>
                     <li class="direction-item">
-                        <img class="direction-img" src="./images/applications.jpg" alt="notebook with mobile phone" width="360" height="300"/>
+                        <img 
+                        class="direction-img" 
+                        srcset="./images/doing/applications.jpg 1x, ./images/doing/applications@2x.jpg 2x"
+                        src="./images/doing/applications.jpg" 
+                        alt="notebook with mobile phone" width="360" height="300"
+                        loading="lazy"
+                        />
                     </li>
                 </ul>
             </div>
@@ -601,7 +619,7 @@
   
         <ul class="mobile-menu list">
           <li>
-            <a class="mobile-menu-nav link" href="./index.html">Studio</a>
+            <a class="mobile-menu-nav current link" href="./index.html">Studio</a>
         </li>
           <li>
             <a class="mobile-menu-nav link" href="./portfolio.html">Portfolio</a>
